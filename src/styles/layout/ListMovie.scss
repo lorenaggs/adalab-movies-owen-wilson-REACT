@@ -1,0 +1,28 @@
+@media all and(min-width: $mobile-width) {
+  .listMovies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .listMovies__Detail {
+    border-radius: 10px;
+    background-color: $background-green;
+    width: 20vw;
+    height: 200px;
+    margin: 8px;
+    padding: 0px 3px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+@media all and(min-width: $tablet-width) {
+  .listMovies__Detail {
+    width: 25vw;
+    height: 50vh;
+  }
+}

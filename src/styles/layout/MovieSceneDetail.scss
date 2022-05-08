@@ -1,0 +1,30 @@
+@media all and(min-width: $mobile-width) {
+  .listMovies__Detail-image {
+    width: auto;
+    height: 50%;
+  }
+
+  .listMovies__Detail-title {
+    font-size: 1rem;
+    color: $color-gray;
+    margin-top: 5px;
+  }
+
+  .listMovies__Detail-fullName {
+    font-size: 1rem;
+    color: $color-white;
+  }
+}
+
+@media all and(min-width: $tablet-width) {
+  .listMovies__Detail-image {
+    height: 70%;
+  }
+  .listMovies__Detail-title {
+    font-size: 1.2rem;
+  }
+
+  .listMovies__Detail-fullName {
+    font-size: 1.2rem;
+  }
+}

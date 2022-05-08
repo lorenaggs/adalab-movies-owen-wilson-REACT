@@ -1,0 +1,74 @@
+@media all and(min-width: $mobile-width) {
+  .linkAudio {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .sectionItem {
+    background: $background-green;
+    width: 90vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
+
+    &__image {
+      height: 250px;
+      margin: 15px 0px 15px 15px;
+    }
+
+    &__contain {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+
+      &-info {
+        &-movie {
+          color: $color-white;
+          font-size: 2rem;
+        }
+        &-audio {
+          color: $color-white;
+          font-size: 1rem;
+        }
+      }
+      &-btn {
+        margin-top: 20%;
+
+        &-return {
+          background-color: $background-green-light;
+          border-radius: 10px;
+          font-size: 1.2rem;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media all and(min-width: $tablet-width) {
+  .sectionItem {
+    &__image {
+      height: 350px;
+    }
+
+    &__contain {
+      &-info {
+        &-movie {
+          font-size: 3rem;
+        }
+        &-audio {
+          font-size: 2rem;
+        }
+      }
+      &-btn {
+        &-return {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

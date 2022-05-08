@@ -1,0 +1,14 @@
+@import './core/variables.scss';
+@import './layout/Header.scss';
+@import './layout/FilterMovie.scss';
+@import './layout/ListMovie.scss';
+@import './layout/MovieSceneDetail.scss';
+@import './layout/MovieSceneItem.scss';
+
+
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}

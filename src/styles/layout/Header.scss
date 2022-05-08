@@ -1,0 +1,13 @@
+@media all and(min-width: $mobile-width) {
+  .title {
+    color: $background-green;
+    margin: 20px;
+    font-size: 2em;
+  }
+}
+
+@media all and(min-width: $tablet-width) {
+  .title {
+    font-size: 3rem;
+  }
+}
