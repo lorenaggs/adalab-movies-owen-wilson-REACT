@@ -13,7 +13,9 @@ function App() {
   const [dataMovies, setDataMovies] = useState([]);
   const [inputMovie, setInputMovie] = useState("");
   const [filterYear, setFilterYear] = useState("");
-
+  const [filterFullName, setFilterFullName] = useState("");
+  const [filterLong, setFilterLong] = useState("");
+  const [filterWow, setFilterWow] = useState("");
   // Trae datos de la API
   useEffect(() => {
     getApiData().then((dataFromApi) => {
@@ -31,6 +33,17 @@ function App() {
     setFilterYear(value);
   };
 
+  const handleFilterFullName = (value) => {
+    setFilterFullName(value);
+  };
+
+  const handleFilterWow = (value) => {
+    setFilterWow(value);
+  };
+  const handleFilterLong = (value) => {
+    setFilterLong(value);
+  };
+
   // filtro de peliculas por nombre de pelicula
   const moviesFilterName = dataMovies
 
@@ -45,6 +58,21 @@ function App() {
       } else {
         return filterYear.includes(movies.year);
       }
+    })
+    .filter((movies) => {
+      return filterFullName === ""
+        ? true
+        : movies.fullLine.toLowerCase().includes(filterFullName.toLowerCase());
+    })
+    .filter((movies) => {
+      return filterWow === ""
+        ? true
+        : parseInt(movies.total_wows_in_movie) === parseInt(filterWow);
+    })
+    .filter((movies) => {
+      return filterLong === ""
+        ? true
+        : movies.fullLine.length === parseInt(filterLong);
     });
 
   // filter de peliculas por año
@@ -73,10 +101,21 @@ function App() {
               <Filters
                 handleFilterMovie={handleFilterMovie}
                 inputMovie={inputMovie}
+
                 handleFilterYear={handleFilterYear}
                 filterYear={filterYear}
                 year={getYears()}
+
+                handleFilterFullName={handleFilterFullName}
+                filterFullName={filterFullName}
+                
+                handleFilterWow={handleFilterWow}
+                filterWow={filterWow}
+                
+                handleFilterLong={handleFilterLong}
+                filterLong={filterLong}
               />
+
               {moviesFilterName.length === 0 && (
                 <h2>Ingrese un nombre de película válida</h2>
               )}

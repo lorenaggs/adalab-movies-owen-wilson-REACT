@@ -2,27 +2,23 @@
   .titleform {
     color: $background-green;
     margin: 10px;
-    font-size: 18px;
   }
 
   .rectangleInput {
     border-radius: 10px;
     border: solid 2px $background-green;
-    width: 25%;
+    width: 80%;
     padding: 5px;
     margin-bottom: 10px;
-    font-size: 18px;
   }
 }
 
 @media all and(min-width: $tablet-width) {
   .titleform {
-    margin: 20px;
     font-size: 20px;
   }
 
   .rectangleInput {
     width: 170px;
-    font-size: 20px;
   }
 }

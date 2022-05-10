@@ -14,6 +14,7 @@ const getApiData = () => {
           director: movie.director,
           linkAudio: movie.audio,
           id: `${movie.year}-${movie.movie.replace(" ", "-")}`,
+          total_wows_in_movie: movie.total_wows_in_movie,
         };
       });
       return dataClean;
