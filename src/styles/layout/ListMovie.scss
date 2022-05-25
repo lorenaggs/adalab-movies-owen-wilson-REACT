@@ -8,7 +8,11 @@
 
   .listMovies__Detail {
     border-radius: 10px;
-    background-color: $background-green;
+    background: linear-gradient(
+    180deg,
+    rgb(134, 242, 175) 0%,
+    rgb(21, 227, 14) 100%
+  );;
     width: 130px;
     height: 200px;
     margin: 8px;
