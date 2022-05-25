@@ -1,18 +1,18 @@
 @media all and(min-width: $mobile-width) {
   .listMovies__Detail-image {
     width: auto;
-    height: 50%;
+    height: 49%;
     border-radius: 10px;
   }
 
   .listMovies__Detail-title {
-    font-size: 1rem;
+    font-size: 13px;
     color: $color-gray;
     margin-top: 5px;
   }
 
   .listMovies__Detail-fullName {
-    font-size: 1rem;
+    font-size: 12px;
     color: $color-white;
   }
 }
@@ -26,6 +26,6 @@
   }
 
   .listMovies__Detail-fullName {
-    font-size: 1.2rem;
+    font-size: 20px;
   }
 }
